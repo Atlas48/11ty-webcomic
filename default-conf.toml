@@ -1,0 +1,6 @@
+[metadata]
+title="Webcomic"
+subtitle="This is a webcomic."
+[metadata.author]
+name="Joe Bloggs"
+email="joebloggs@example.com"

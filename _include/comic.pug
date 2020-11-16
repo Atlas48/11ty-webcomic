@@ -1,0 +1,29 @@
+extends all.pug
+
+- f=collections.post[0]
+- p=getPreviousCollectionItem(collections.post,page);
+- n=getNextCollectionItem(collections.post,page);
+- l=collections.post[collections.post.length-1];
+mixin navbar(first, prev, next, last)
+  .navbar
+    a(href=first.url alt='First'): img(src='/img/first.png')
+    a(href=prev.url alt='Previous'): img(src='/img/previous.png')
+    a(href=number alt='Random'):  img(src='/img/random.png')
+    if typeof next != undefined
+      a(href=next.url alt='Next'): img(src='/img/next.png')
+      a(href=last.url alt='Latest'): img(src='/img/latest.png')
+block content
+  hr
+  .webcomic
+    h1=title
+    hr
+    +navbar(f,p,n,l)
+    hr
+    img.main(src=page.fileSlug+ext[page.fileSlug] alt=page.alt)
+    hr
+    +navbar(f,p,n,l)
+  hr
+  .description
+    h1=title
+    .date=date
+    #desc-main=content

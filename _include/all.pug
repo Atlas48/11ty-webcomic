@@ -1,0 +1,15 @@
+- inc=(x => x+1)
+- dec=(x => x-1)
+doctype html
+html
+  head
+    title= title
+    if fs.existsSync('style.css')
+      link(rel="stylesheet" type="text/css" src="style.css")
+  body
+    .top
+      img(src=`/img/${banner.logo}` alt=banner.alt)
+    .middle
+      block body
+    .bottom
+      //TODO: ADD CODE
