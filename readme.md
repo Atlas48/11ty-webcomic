@@ -5,4 +5,4 @@
 
 This provides a template for a the creation of a webcomic, partly inspired by [comicpress](http://comicpress.net/).
 
-As of Nvember 2020, this is pre-alpha.
+As of November 2020, this is pre-alpha.
