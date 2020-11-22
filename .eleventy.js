@@ -1,6 +1,7 @@
 const toml = require('toml');
 const fs = require('fs').promises;
 const path=require('path');
+const ast=require('ampelstatus');
 const CONFIG=__dirname+"/conf.toml";
 
 include = {
@@ -22,6 +23,9 @@ async function main(conf) {
   } catch(e) {
     console.err(`11ty-webcomic: Unable to load config: ${e.message}`);
     if(typeof data == 'undefined') var data=new Object;
+  }
+  finallly {
+    data=include.concat(data);
   }
   //END CONFIG-PARSE
   //BEGIN EXTENSION-MAP
