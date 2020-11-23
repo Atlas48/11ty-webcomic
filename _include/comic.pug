@@ -11,7 +11,10 @@ mixin navbar(first, prev, next, last)
     a(href=number alt='Random'):  img(src='/img/random.png')
     if typeof next != undefined
       a(href=next.url alt='Next'): img(src='/img/next.png')
-      a(href=last.url alt='Latest'): img(src='/img/latest.png')
+      if l===page
+        a(href=last.url alt='Latest'): img(src='/img/latest.png')
+      else
+        img(src='/img/latest-inactive.png')
 block content
   hr
   .webcomic
